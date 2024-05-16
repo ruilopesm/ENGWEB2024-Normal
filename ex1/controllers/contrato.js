@@ -10,7 +10,7 @@ module.exports.findById = (id) => {
 }
 
 module.exports.listByEntidade = (entidade) => {
-    return Contrato.find({ entidade_comunicante: entidade }).exec();
+    return Contrato.find({ NIPC_entidade_comunicante: entidade }).exec();
 }
 
 module.exports.listByTipo = (tipo) => {

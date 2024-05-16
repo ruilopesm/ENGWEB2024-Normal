@@ -7,7 +7,7 @@ var contratoSchema = new mongoose.Schema({
     objectoContrato: String,
     dataPublicacao: String,
     dataCelebracaoContrato: String,
-    precoContratual: String,
+    precoContratual: Number,
     prazoExecucao: Number,
     NIPC_entidade_comunicante: Number,
     entidade_comunicante: String,
