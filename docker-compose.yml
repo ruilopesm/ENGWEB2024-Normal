@@ -1,0 +1,29 @@
+services:
+  ex1:
+    build:
+      context: ./ex1
+    ports:
+      - "16000:16000"
+    depends_on:
+      - mongodb
+  
+  ex2:
+    build:
+      context: ./ex2
+    ports:
+      - "16001:16001"
+    depends_on:
+      - ex1
+  
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    depends_on:
+      - seed
+  
+  seed:
+    image: mongo
+    volumes:
+      - ./data/contratos_final.json:/contratos_final.json
+    command: mongoimport --host mongodb -d contratos -c contratos --type json --file contratos_final.json --jsonArray
