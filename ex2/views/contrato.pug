@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  a(href='/') Voltar
+  .w3-card-4
+    header.w3-pink
+      h2.w3-center Contrato
+    .w3-container
+      if contrato._id
+        p id: #{contrato._id}
+      if contrato.nAnuncio
+        p nAnuncio: #{contrato.nAnuncio}
+      if contrato.tipoprocedimento
+        p tipoprocedimento: #{contrato.tipoprocedimento}
+      if contrato.objectoContrato
+        p objectoContrato: #{contrato.objectoContrato}
+      if contrato.dataPublicacao
+        p dataPublicacao: #{contrato.dataPublicacao}
+      if contrato.dataCelebracaoContrato
+        p dataCelebracaoContrato: #{contrato.dataCelebracaoContrato}
+      if contrato.precoContratual
+        p precoContratual: #{contrato.precoContratual}
+      if contrato.prazoExecucacao
+        p prazoExecucacao: #{contrato.prazoExecucacao}
+      if contrato.NIPC_entidade_comunicante
+        p NIPC_entidade_comunicante: #{contrato.NIPC_entidade_comunicante}
+      if contrato.entidade_comunicante
+        p entidade_comunicante: #{contrato.entidade_comunicante}
+      if contrato.fundamentacao
+        p fundamentacao: #{contrato.fundamentacao}
