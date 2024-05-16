@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var axios = require('axios');
 
-const api_url = 'http://localhost:16000';
+const api_url = 'http://engweb2024-normal-ex1-1:16000';
 
 router.get('/', function(req, res, next) {
   axios.get(api_url + '/contratos')
