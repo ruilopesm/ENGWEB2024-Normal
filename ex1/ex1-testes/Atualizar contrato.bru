@@ -1,0 +1,17 @@
+meta {
+  name: Atualizar contrato
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{host}}/contratos/123456789
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "entidade_comunicante": "AAA"
+  }
+}
